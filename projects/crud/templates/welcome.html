@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<div class="container">
+    <h1>Welcome user list page.</h1>
+
+    <ul>
+        {% for info in info %}
+        <div>
+            {% if info.active %}
+            <p>This active user</p>
+            {% else %}
+            <p> This inactive user</p>
+            {% endif %}
+        </div>
+        <li>{{info.name}}</li>
+        <li>{{info.age}}</li>
+        <li>{{info.address}}</li>
+        <li>{{info.phone}}</li>
+        {%endfor%}
+    </ul>
+</div>
+
+{% endblock %}
